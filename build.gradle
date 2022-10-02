@@ -3,7 +3,9 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.14.RELEASE'
 	id 'java'
 	id 'jacoco'
+	id 'checkstyle'
 }
+
 
 group = 'com.leszko'
 version = '0.0.1-SNAPSHOT'
