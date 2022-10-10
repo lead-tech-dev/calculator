@@ -91,9 +91,9 @@ pipeline {
       stage("Release") {
          steps {
             sh "kubectl config use-context production"
-            sh "kubectl apply -f hazelcast.yaml"
-            sh "kubectl apply -f deployment.yaml"
-            sh "kubectl apply -f service.yaml"                    
+            sh "kubectl apply -f hazelcast.yml"
+            sh "kubectl apply -f deployment.yml"
+            sh "kubectl apply -f service.yml"                    
           }
        }
        stage("Smoke test") {
