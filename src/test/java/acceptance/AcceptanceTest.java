@@ -7,7 +7,11 @@ import org.junit.runner.RunWith;
 
 /** Acceptance Test */
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features", plugin = { "pretty", "html:target/html-cucumber-report" })
+@CucumberOptions(
+		features = "src/test/resources/features/calculator.feature", 
+		glue = {"src/test/java/acceptance/StepDefinitions"}, 
+		plugin = { "pretty", "html:target/html-cucumber-report" }
+	)
 public class AcceptanceTest {
 
 }
