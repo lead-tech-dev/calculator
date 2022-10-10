@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 /** Acceptance Test */
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "classpath:feature")
+@CucumberOptions(features = "src/test/resources/feature")
 public class AcceptanceTest {
 
 }
