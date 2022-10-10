@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 /** Acceptance Test */
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/features/calculator.feature", 
-		glue = {"StepDefinitions"}, 
+		features = "src/test/resources/features", 
+		glue = {"src/test/java/acceptance/StepDefinitions"}, 
 		plugin = { "pretty", "html:target/html-cucumber-report" }
 	)
 public class AcceptanceTest {
