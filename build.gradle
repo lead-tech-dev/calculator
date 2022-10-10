@@ -24,8 +24,21 @@ dependencies {
     testImplementation("io.cucumber:cucumber-junit:7.2.0")
 }
 
+tasks.register('acceptanceTest', Test) { 
+	include '**/acceptance/**' 
+	systemProperties System.getProperties() 
+} 
+
+tasks.register('smokeTest', Test) { 
+	include '**/smoke/**' 
+	systemProperties System.getProperties() 
+} 
+
+  
+
 tasks.register('acceptanceTest', Test) {
-	include '**/accptance/**'
+	exclude '**/accptance/**'
+	exclude '**/smoke/**'
 	systemProperties System.getProperties()
 }
 
