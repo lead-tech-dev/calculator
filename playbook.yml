@@ -5,7 +5,7 @@
   tasks:
   - name: Update APT Cache
     apt:
-     update_cache: yes
+     update_cache: true
      force_apt_get: yes
 
   - name: Remove apt lock file
