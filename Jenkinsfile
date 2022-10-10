@@ -62,7 +62,7 @@ pipeline {
       	steps{
       		script {
 	      		withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhub')]) {
-				   sh 'docker login -u cartman81 -p ${dockerhubpwd}'
+				   sh 'docker login -u cartman81 -p ${dockerhub}'
 	               sh "docker push cartman81/calculator:${BUILD_TIMESTAMP}"
 				}
       		}
